@@ -1,0 +1,20 @@
+source: https://deeplizard.com/learn/video/el39D7rz7K0
+How To Debug
+In order to debug any python code in Visual Studio Code, we need to install the python debugging extension. This will give us debugging capabilities. Once the debugging extension is installed, we follow these steps.
+
+Place a breakpoint
+Run the program in debug mode
+Use Keyboard to manually control program execution
+Step into something PyTorch
+Note that there is an additional requirement to debug imported libraries like PyTorch. We need to set the justMyCode attribute to false inside the launch.json file for VS Code.
+
+Below is an example launch configuration.
+
+{
+    "name": "Python: Current File",
+    "type": "python",
+    "request": "launch",
+    "program": "${file}",
+    "justMyCode": false,
+    "cwd": "${fileDirname}"
+}

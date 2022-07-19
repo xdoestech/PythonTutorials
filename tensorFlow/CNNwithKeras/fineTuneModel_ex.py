@@ -88,7 +88,8 @@ model.summary()
 model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001), loss='categorical_crossentropy', metrics=['accuracy'])
 #train the model for 5 epochs
 #NOTE: to change what you see during training:https://stackoverflow.com/questions/39124676/show-progress-bar-for-each-epoch-during-batchwise-training-in-keras
-model.fit(x=cip.train_batches,
+model.fit(
+          x=cip.train_batches,
           steps_per_epoch=len(cip.train_batches),
           validation_data=cip.valid_batches,
           validation_steps=len(cip.valid_batches),
